@@ -1,2 +1,4 @@
 # CD70-predictor-in-Myeloma
 Machine learning analysis for transcriptional regulation of CD70 expression in multiple myeloma patient samples
+
+Patient transcriptomic data were acquired from the Multiple Myeloma Research Foundation CoMMpass dataset (IA19). A list of 84 transcription factors was generated for this analysis by combining those from ATAC-seq motif analysis of MM patient tumors with analysis of ENCODE and PROMO data suggesting binding of different transcription factors to the CD70 locus in plasma cells. CD138+ enriched RNA-Seq data from 928 MM patients was incorporated into the model. All counts (in Transcripts per Million (TPM)) were log-transformed prior to model building and analysis. We developed an XGBoost model (Extreme Gradient Boosting) using the xgboost package in Python. We used a randomized search with cross-validation to find the best parameters for the XGBoost models to predict CD70 expression. 
